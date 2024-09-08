@@ -6,4 +6,8 @@ public class TeenContestant : Contestant
     {
         EntryFee = 20.00m;  // Entry fee for teens
     }
+    public override string ToString()
+    {
+        return base.ToString() + " (Category: Teen)";
+    }
 }
