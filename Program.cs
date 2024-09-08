@@ -47,4 +47,19 @@ public class ContestantDemo
         } while (!int.TryParse(Console.ReadLine(), out numContestants) || numContestants < 0 || numContestants > 30);
         return numContestants;
     }
+
+    // Create contestant based on age
+    static Contestant CreateContestant()
+    {
+        Console.Write("Enter contestant's name: ");
+        string name = Console.ReadLine();
+
+        Console.Write("Enter contestant's age: ");
+        int age = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Talent codes: (S)inging, (D)ancing, (M)usical Instrument, (O)ther");
+        char talentCode = GetTalentCode();
+
+        Contestant contestant;
+    }
 }
