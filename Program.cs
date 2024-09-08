@@ -104,4 +104,23 @@ public class ContestantDemo
             Console.WriteLine($"{Contestant.TalentCodes[i]}: {Contestant.TalentDescriptions[i]}");
         }
     }
+    // Display contestants by talent code
+    static void DisplayContestantsByTalent(Contestant[] contestants, char talentCode)
+    {
+        Console.WriteLine($"\nContestants with talent code {talentCode}:");
+        bool found = false;
+        foreach (var contestant in contestants)
+        {
+            if (contestant.TalentCode == talentCode)
+            {
+                Console.WriteLine(contestant);
+                found = true;
+            }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("No contestants found for this talent.");
+        }
+    }
 }
