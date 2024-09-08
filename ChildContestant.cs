@@ -11,4 +11,5 @@ public class ChildContestant : Contestant
     {
         return base.ToString() + " (Category: Child)";
     }
+
 }
