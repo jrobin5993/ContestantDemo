@@ -95,4 +95,13 @@ public class ContestantDemo
         } while (Array.IndexOf(Contestant.TalentCodes, talentCode) == -1 && talentCode != 'X');
         return talentCode;
     }
+    // Display available talent categories
+    static void DisplayTalentCategories()
+    {
+        Console.WriteLine("\nValid Talent Categories:");
+        for (int i = 0; i < Contestant.TalentCodes.Length; i++)
+        {
+            Console.WriteLine($"{Contestant.TalentCodes[i]}: {Contestant.TalentDescriptions[i]}");
+        }
+    }
 }
