@@ -2,5 +2,8 @@
 
 public class ChildContestant : Contestant
 {
-	
+    public ChildContestant()
+    {
+        EntryFee = 15.00m;  // Entry fee for children
+    }
 }
