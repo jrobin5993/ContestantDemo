@@ -37,4 +37,14 @@ public class ContestantDemo
             DisplayContestantsByTalent(contestants, talentCode);
         }
     }
+    // Get a valid number of contestants (0 to 30)
+    static int GetNumberOfContestants()
+    {
+        int numContestants;
+        do
+        {
+            Console.Write("Enter the number of contestants (0-30): ");
+        } while (!int.TryParse(Console.ReadLine(), out numContestants) || numContestants < 0 || numContestants > 30);
+        return numContestants;
+    }
 }
