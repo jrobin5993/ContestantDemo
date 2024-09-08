@@ -26,4 +26,9 @@ public class Contestant
             TalentDescription = "Invalid";
         }
     }
+
+    public override string ToString()
+    {
+        return $"Name: {Name}, Talent: {TalentDescription}, Entry Fee: {EntryFee:C}";
+    }
 }
