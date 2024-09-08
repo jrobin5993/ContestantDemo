@@ -5,3 +5,9 @@
  * Resource:
  */
 
+using System;
+
+public class ContestantDemo
+{
+    
+}
