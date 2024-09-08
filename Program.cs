@@ -9,6 +9,8 @@ using Microsoft.VisualBasic;
 using System;
 
 using System;
+using System.Reflection.Metadata;
+using System.Xml.Linq;
 
 public class ContestantDemo
 {
@@ -61,5 +63,24 @@ public class ContestantDemo
         char talentCode = GetTalentCode();
 
         Contestant contestant;
+
+        // Determine the type of contestant based on age
+        if (age <= 12)
+        {
+            contestant = new ChildContestant();
+        }
+        else if (age <= 17)
+        {
+            contestant = new TeenContestant();
+        }
+        else
+        {
+            contestant = new AdultContestant();
+        }
+
+        contestant.Name = name;
+        contestant.SetTalentCode(talentCode);
+
+        return contestant;
     }
 }
