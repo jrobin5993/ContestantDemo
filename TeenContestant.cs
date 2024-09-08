@@ -10,4 +10,5 @@ public class TeenContestant : Contestant
     {
         return base.ToString() + " (Category: Teen)";
     }
+
 }
