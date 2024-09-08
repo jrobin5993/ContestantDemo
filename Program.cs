@@ -83,4 +83,16 @@ public class ContestantDemo
 
         return contestant;
     }
+    // Get a valid talent code
+    static char GetTalentCode()
+    {
+        char talentCode;
+        do
+        {
+            Console.Write("Enter talent code: ");
+            talentCode = char.ToUpper(Console.ReadKey().KeyChar);
+            Console.WriteLine();
+        } while (Array.IndexOf(Contestant.TalentCodes, talentCode) == -1 && talentCode != 'X');
+        return talentCode;
+    }
 }
