@@ -9,5 +9,11 @@ using System;
 
 public class ContestantDemo
 {
-    
+    static void Main(string[] args)
+    {
+        int numContestants = GetNumberOfContestants();
+        Contestant[] contestants = new Contestant[numContestants];
+        decimal totalRevenue = 0;
+
+    }
 }
